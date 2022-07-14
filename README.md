@@ -1,10 +1,16 @@
-KittyBot
+## **Телеграм-бот KittyBot**
 
-Что это: Телеграм-бот
-Что делает: посылает по запросу слуйчаную фотографию кошки
-Откуда посылает: https://api.thecatapi.com
+Телеграм-бот присылает по запросу котиков, а если не получится, то пришлет собачек.
+Котиков он берет [тут](https://thecatapi.com), а собачек [тут](https://thedogapi.com)
 
-Дополнительно:
-Если вдруг фото кошки не найдется, или упадет сервер с кошками,
-бот пришлет в чат фото собаки с https://api.thedogapi.com
+Бот использует библиотеку **python-telegram-bot**
 
+### Для запуска бота:
+- склонируйте проект
+`git clone https://github.com/Andrey-Kugubaev/KittyBot.git`
+- установите и активируйте виртуальное окружение
+`python -m venv venv (или python3 -m venv venv) / source venv/Scripts/activate (или source venv/bin/activate)`
+- установите библиотеку `pip install python-telegram-bot`
+- создайте в корне проекта файл `.env` и укажите в нем token вашего бота `TOKEN=xxx`
+- запустите файл `kittybot.py`
+- наслаждайтесь котиками, или собачками

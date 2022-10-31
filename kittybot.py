@@ -3,14 +3,15 @@ import os
 
 import requests
 
-from telegram import ReplyKeyboardMarkup
 from telegram.ext import CommandHandler, Updater
+from telegram import ReplyKeyboardMarkup
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
 secret_token = os.getenv('TOKEN')
+updater = Updater(token=secret_token, use_context=True)
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -52,8 +53,6 @@ def wake_up(update, context):
 
 
 def main():
-    updater = Updater(token=secret_token)
-
     updater.dispatcher.add_handler(CommandHandler('start', wake_up))
     updater.dispatcher.add_handler(CommandHandler('newcat', new_cat))
 

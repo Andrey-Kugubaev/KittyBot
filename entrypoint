@@ -1,0 +1,7 @@
+#!/bin/sh
+sleep 5;
+pip3 install python-telegram-bot
+pip3 install requests
+pip3 install python-dotenv
+sleep 5;
+python3 kittybot.py
